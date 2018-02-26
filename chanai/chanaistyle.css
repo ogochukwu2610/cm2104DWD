@@ -48,3 +48,7 @@ html {
    font-size: 12px;
    padding: 15px;
 }
+/*for mobile phones*/
+[class*="col-"]{
+  width:100%;
+}
