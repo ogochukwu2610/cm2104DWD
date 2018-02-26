@@ -52,3 +52,8 @@ html {
 [class*="col-"]{
   width:100%;
 }
+@media only screen and (min-width:768px){
+/*for desktop*/
+.col-3{width:25%;}
+.col-6{width:50%;}
+}
