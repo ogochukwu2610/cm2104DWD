@@ -1,9 +1,10 @@
-const MongoClient = require('mongodb').MongoClient; 
+const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb://localhost:27017/users";
 const express = require('express');
 const app = express();
-const session = require('express-session'); 
-const bodyParser = require('body-parser'); 
+app.use(express.static('public'))
+const session = require('express-session');
+const bodyParser = require('body-parser');
 
 app.use(session({ secret: 'example' }));
 
@@ -64,7 +65,7 @@ var datatostore = {
 "name":req.body.username,
  "email":req.body.email,
   "password":req.body.password}
- 
+
 
 
 //once created we just run the data string against the database and all our new data will be saved/
